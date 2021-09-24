@@ -1,0 +1,15 @@
+[workspace]
+members = [
+    "app/api",
+    "app/cli",
+    "app/im",
+    "app/map",
+    "app/moment",
+    "app/news",
+    "app/search",
+    "app/store",
+    "app/user",
+    "core",
+]
+# cargo run --bin api
+default-members = ["app/api"]
