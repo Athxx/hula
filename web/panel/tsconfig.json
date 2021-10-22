@@ -9,7 +9,6 @@
     "allowJs": true,
     "checkJs": true,
     /* customize */
-    "moduleResolution": "node",
     "strict": true,
     "importsNotUsedAsValues": "error",
     "importHelpers": true,
@@ -21,11 +20,10 @@
     "allowSyntheticDefaultImports": true,
     "noImplicitAny": false,
     "experimentalDecorators": true,
-    "paths": {
-      "@*": [
-        "src/*"
-      ]
-    }
+    "lib": [
+      "esnext",
+      "dom"
+    ]
   },
   "include": [
     "src/**/*.d.ts",
@@ -34,6 +32,7 @@
     "src/**/*.svelte"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "dist"
   ]
 }

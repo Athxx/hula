@@ -1,24 +1,17 @@
 use lazy_static::lazy_static;
-use dotenv::dotenv;
+use std::env;
 
 lazy_static! {
-	dotenv().ok();
-	pub static ref HTTP_PORT : String = dotenv::var("ADDRESS").expect("Expected ADDRESS to be set in env!");
-	pub static ref REDIS : String = dotenv::var("ADDRESS").expect("Expected ADDRESS to be set in env!");
-	pub static ref EMAIL : Email  = dotenv::var("ADDRESS").expect("Expected ADDRESS to be set in env!");
-
-
+    pub static ref HTTP_PORT: String = env::var("ADDRESS").expect("Expected ADDRESS to be set in env!");
+    pub static ref REDIS: String = env::var("ADDRESS").expect("Expected ADDRESS to be set in env!");
+    pub static ref EMAIL: String = env::var("ADDRESS").expect("Expected ADDRESS to be set in env!");
 }
 
-
-
-
-
 pub struct EmailCfg {
-	ak: str,
-	sk: str,
-	smtp: str,
-	port: str,
+	ak: String,
+	sk: String,
+	smtp: String,
+	port: String,
 }
 
 pub struct SMS {
@@ -36,9 +29,9 @@ pub struct Oss {
 }
 
 pub struct Database {
-	addr: str,
-	auth: str,
-	name: str,
+	addr: String,
+	auth: String,
+	name: String,
 	show_log: bool,
 	lifetime: i8,
 	open_conns: i8,
@@ -46,11 +39,10 @@ pub struct Database {
 }
 
 pub struct Map {
-	google_ak: str,
-	google_sk: str,
-	amap_ak: str,
-	amap_sk: str,
-	baidu_ak: str,
-	baidu_sk: str,
+	google_ak: String,
+	google_sk: String,
+	amap_ak: String,
+	amap_sk: String,
+	baidu_ak: String,
+	baidu_sk: String,
 }
-

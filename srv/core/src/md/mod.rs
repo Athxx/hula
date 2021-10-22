@@ -1,4 +1,1 @@
-
-pub mod md {
-    mod user;
-}
+pub mod user;

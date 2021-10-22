@@ -16,3 +16,6 @@ pub mod time;
 pub mod tlv;
 pub mod validate;
 pub mod zip;
+pub mod cli;
+pub mod file;
+pub mod p2p;

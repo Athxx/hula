@@ -1,4 +1,11 @@
+use actix_cors::Cors;
+
 fn _cors() {
+	let cors = Cors::default()
+		.allowed_origin("https://www.example.com")
+		.allowed_methods(vec!["GET", "POST"])
+		.allow_any_header()
+		.max_age(3600);
 	// return actix_cors::Cors::default()
 	//     .allowed_origin("https://www.rust-lang.org/")
 	//     .allowed_origin_fn(|origin, _req_head| {

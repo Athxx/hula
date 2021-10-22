@@ -9,3 +9,5 @@ actix-cors = "0.5"
 # routine packages
 dotenv = "0.15.0"
 lazy_static = "1.4.0"
+
+rbatis = "3.0.11"
