@@ -31,7 +31,7 @@ req.interceptors.response.use(
 		// 401001 token过期
 		if (code === 401001) {
 			// token 过期提示并自动退出登录
-			localStorage.removeItem('XK-Token')
+			localStorage.removeItem('Token')
 			// window.vueApp.$toast.removeAllGroups()
 			// window.vueApp.$toast.add({
 			// 	summary: '登录信息已过期，请重新登录',
