@@ -13,7 +13,6 @@
 	theme='auto'
 >
 	<View>
-		sdfsdf
 		<Routes/>
 	</View>
 </App>
