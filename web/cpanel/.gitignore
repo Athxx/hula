@@ -1,0 +1,44 @@
+target
+.svelte*
+
+################################# COMMON #################################
+# web front-end cache
+node_modules
+dist
+*-lock.*
+
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# IDE and autogenerate files/dirs and compress files
+*.out
+.idea
+.vscode
+.vs
+.project
+.DS_Store
+Thumbs.db
+*.sw?
+*.7z
+*.zip
+*.rar
+*.tar
+*.gz
+*.xz
+*.tgz
+
+# log files and runtime files
+*.log
+*.cache
+*.test
+*.lock
+test*
+.bin
+temp
+tmp
+
+!.gitignore
