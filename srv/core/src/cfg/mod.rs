@@ -7,42 +7,56 @@ lazy_static! {
     pub static ref EMAIL: String = env::var("ADDRESS").expect("Expected ADDRESS to be set in env!");
 }
 
-pub struct EmailCfg {
-	ak: String,
-	sk: String,
-	smtp: String,
-	port: String,
+pub struct Base {
+	pub mode: i8, // 0.prd  , 1.dev , 2.test
+	pub mode_curl : bool,
+}
+
+pub struct Logger {
+	pub level : String,
+	pub stdout : bool,
+	pub stderr : bool,
+	pub format : String, // json, console
+}
+
+pub struct Email {
+	pub ak: String,
+	pub sk: String,
+	pub smtp: String,
+	pub port: String,
 }
 
 pub struct SMS {
-	url: String,
-	ak: String,
-	sk: String,
+	pub url: String,
+	pub ak: String,
+	pub sk: String,
 }
 
 pub struct Oss {
-	ak: String,
-	sk: String,
-	endpoint: String,
-	bucket: String,
-	ttl: i8,
+	pub ak: String,
+	pub sk: String,
+	pub endpoint: String,
+	pub bucket: String,
+	pub ttl: i8,
+	pub thumbnail: String,
+	pub callback_url : String
 }
 
 pub struct Database {
-	addr: String,
-	auth: String,
-	name: String,
-	show_log: bool,
-	lifetime: i8,
-	open_conns: i8,
-	idle_conns: i8,
+	pub addr: String,
+	pub auth: String,
+	pub name: String,
+	pub show_log: bool,
+	pub lifetime: i8,
+	pub open_conns: i8,
+	pub idle_conns: i8,
 }
 
 pub struct Map {
-	google_ak: String,
-	google_sk: String,
-	amap_ak: String,
-	amap_sk: String,
-	baidu_ak: String,
-	baidu_sk: String,
+	pub google_ak: String,
+	pub google_sk: String,
+	pub amap_ak: String,
+	pub amap_sk: String,
+	pub baidu_ak: String,
+	pub baidu_sk: String,
 }

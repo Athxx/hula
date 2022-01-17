@@ -19,3 +19,4 @@ pub mod zip;
 pub mod cli;
 pub mod file;
 pub mod p2p;
+pub mod string;

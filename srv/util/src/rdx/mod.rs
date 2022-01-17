@@ -1,4 +1,11 @@
-pub struct OxObject;
+use redis::{Commands, pipe};
+use redis::cluster::ClusterClient;
+
+pub fn init(nodes: Vec<String>) -> Result<T, E> {
+	let cli = ClusterClient::open(nodes).unwrap();
+	let mut conn = cli.get_connection().unwrap();
+	return conn;
+}
 
 pub fn get(_key: String) {}
 
